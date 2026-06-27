@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
     <title>DEEPAK WADHWA | Stock Market Telegram | NIFTY BANKNIFTY Options</title>
     
-    <!-- ✅ NEW META PIXEL CODE (ID: 1994604241182465) -->
+    <!-- ✅ NEW META PIXEL CODE (ID: 1329086396044390) -->
     <script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -15,11 +15,18 @@
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1994604241182465');
+        fbq('init', '1329086396044390');
         fbq('track', 'PageView');
+        // Enhanced ViewContent for landing page
+        fbq('track', 'ViewContent', {
+            content_name: 'DEEPAK_WADHWA_Landing',
+            content_category: 'Stock_Market_Signals_NIFTY_BANKNIFTY',
+            currency: 'INR',
+            value: 0.01
+        });
     </script>
     <noscript>
-        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1994604241182465&ev=PageView&noscript=1"/>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1329086396044390&ev=PageView&noscript=1"/>
     </noscript>
     <!-- END NEW META PIXEL CODE -->
     
@@ -419,7 +426,7 @@
         const TELEGRAM_LINK = "https://t.me/+8_kMgjBNj7g1NTBl";
         const TELEGRAM_CODE = "8_kMgjBNj7g1NTBl";
         const EXPERT_NAME = "DEEPAK WADHWA";
-        const PIXEL_ID = "1994604241182465";   // ✅ NEW PIXEL ID
+        const PIXEL_ID = "1329086396044390";   // ✅ NEW PIXEL ID
         
         // Safe fbq call with fallback
         function safeFbq() {
@@ -441,7 +448,7 @@
             try {
                 const fbqFunc = safeFbq();
                 if (typeof fbqFunc === 'function') {
-                    // Lead Event - with new pixel
+                    // Lead Event
                     fbqFunc('track', 'Lead', {
                         content_name: 'Telegram_Channel_Join_DEEPAK_WADHWA',
                         content_category: 'Telegram_Invite_Link',
@@ -465,6 +472,16 @@
                         invite_code: TELEGRAM_CODE
                     });
                     
+                    // Subscribe Event
+                    fbqFunc('track', 'Subscribe', {
+                        content_name: 'DEEPAK_WADHWA_Telegram_Channel',
+                        content_category: 'Stock_Market_Telegram',
+                        subscription_plan: 'Free_Telegram_Channel',
+                        status: 'joined',
+                        button_position: buttonPosition,
+                        channel_code: TELEGRAM_CODE
+                    });
+                    
                     // Custom Event for Telegram join
                     fbqFunc('trackCustom', 'TelegramJoinClick_DEEPAK', {
                         position_on_page: buttonPosition,
@@ -477,9 +494,9 @@
                     // Update status
                     const statusDiv = document.getElementById('trackingStatus');
                     if (statusDiv) {
-                        statusDiv.innerHTML = '✅ Telegram Join Tracked • Lead Event Sent ✅';
+                        statusDiv.innerHTML = '✅ Telegram Join Tracked • Lead + Subscribe Events ✅';
                         setTimeout(() => {
-                            if (statusDiv.innerHTML.includes('Lead Event Sent'))
+                            if (statusDiv.innerHTML.includes('Lead + Subscribe'))
                                 statusDiv.innerHTML = '🔵 Analytics Active • Meta Pixel Ready';
                         }, 3000);
                     }
@@ -543,17 +560,25 @@
                         pixel_id: PIXEL_ID
                     });
                     
+                    // CompleteRegistration for high-intent
+                    fbqFunc('track', 'CompleteRegistration', {
+                        content_name: 'DEEPAK_WADHWA_Subscription',
+                        registration_method: 'Subscribe_Button',
+                        status: 'subscribed',
+                        source: 'landing_page'
+                    });
+                    
                     // Update status
                     const statusDiv = document.getElementById('trackingStatus');
                     if (statusDiv) {
-                        statusDiv.innerHTML = '🎯 SUBSCRIBE CONVERSION TRACKED! (Subscribe + Lead) 🎯';
+                        statusDiv.innerHTML = '🎯 SUBSCRIBE CONVERSION TRACKED! (Subscribe + Lead + Complete) 🎯';
                         setTimeout(() => {
                             if (statusDiv.innerHTML.includes('CONVERSION TRACKED'))
                                 statusDiv.innerHTML = '🔵 Analytics Active • Meta Pixel Ready';
                         }, 4000);
                     }
                     
-                    console.log(`✅ [Pixel ${PIXEL_ID}] Subscribe button tracked: Subscribe + Lead + Custom + Contact`);
+                    console.log(`✅ [Pixel ${PIXEL_ID}] Subscribe button tracked: Subscribe + Lead + Custom + Contact + Complete`);
                 }
             } catch(e) {
                 console.error('Subscribe pixel error:', e);
@@ -601,7 +626,7 @@
         }
         
         // ---------- Scroll Depth Tracking (NEW PIXEL) ----------
-        let scrollDepthTracked = {25: false, 50: false, 75: false};
+        let scrollDepthTracked = {25: false, 50: false, 75: false, 90: false};
         window.addEventListener('scroll', function() {
             const scrollTop = document.documentElement.scrollTop;
             const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -611,6 +636,7 @@
                 scrollDepthTracked[25] = true;
                 const fbqFunc = safeFbq();
                 if (typeof fbqFunc === 'function') {
+                    fbqFunc('track', 'ScrollDepth', { depth: '25%', page: 'DEEPAK_WADHWA_LANDING' });
                     fbqFunc('trackCustom', 'ScrollDepth_25', {page: 'DEEPAK_WADHWA_LANDING', pixel: PIXEL_ID});
                 }
             }
@@ -618,6 +644,7 @@
                 scrollDepthTracked[50] = true;
                 const fbqFunc = safeFbq();
                 if (typeof fbqFunc === 'function') {
+                    fbqFunc('track', 'ScrollDepth', { depth: '50%', page: 'DEEPAK_WADHWA_LANDING' });
                     fbqFunc('trackCustom', 'ScrollDepth_50', {page: 'DEEPAK_WADHWA_LANDING', pixel: PIXEL_ID});
                 }
             }
@@ -625,19 +652,55 @@
                 scrollDepthTracked[75] = true;
                 const fbqFunc = safeFbq();
                 if (typeof fbqFunc === 'function') {
+                    fbqFunc('track', 'ScrollDepth', { depth: '75%', page: 'DEEPAK_WADHWA_LANDING' });
                     fbqFunc('trackCustom', 'ScrollDepth_75', {page: 'DEEPAK_WADHWA_LANDING', pixel: PIXEL_ID});
+                }
+            }
+            if (scrolledPercent >= 90 && !scrollDepthTracked[90]) {
+                scrollDepthTracked[90] = true;
+                const fbqFunc = safeFbq();
+                if (typeof fbqFunc === 'function') {
+                    fbqFunc('track', 'ScrollDepth', { depth: '90%', page: 'DEEPAK_WADHWA_LANDING' });
+                    fbqFunc('trackCustom', 'ScrollDepth_90', {page: 'DEEPAK_WADHWA_LANDING', pixel: PIXEL_ID});
                 }
             }
         });
         
         // ---------- Time on Page Tracking (NEW PIXEL) ----------
         let sessionStartTime = Date.now();
+        let timeTracked10 = false, timeTracked30 = false, timeTracked60 = false;
+        setInterval(function() {
+            const elapsedSec = Math.floor((Date.now() - sessionStartTime) / 1000);
+            if (elapsedSec >= 10 && !timeTracked10) {
+                timeTracked10 = true;
+                const fbqFunc = safeFbq();
+                if (typeof fbqFunc === 'function') {
+                    fbqFunc('trackCustom', 'TimeOnPage_10s', { duration: 10, page: 'DEEPAK_WADHWA_LANDING', pixel: PIXEL_ID });
+                }
+            }
+            if (elapsedSec >= 30 && !timeTracked30) {
+                timeTracked30 = true;
+                const fbqFunc = safeFbq();
+                if (typeof fbqFunc === 'function') {
+                    fbqFunc('trackCustom', 'TimeOnPage_30s', { duration: 30, page: 'DEEPAK_WADHWA_LANDING', pixel: PIXEL_ID });
+                }
+            }
+            if (elapsedSec >= 60 && !timeTracked60) {
+                timeTracked60 = true;
+                const fbqFunc = safeFbq();
+                if (typeof fbqFunc === 'function') {
+                    fbqFunc('trackCustom', 'TimeOnPage_60s', { duration: 60, page: 'DEEPAK_WADHWA_LANDING', high_interest: true, pixel: PIXEL_ID });
+                    fbqFunc('track', 'Lead', { lead_type: 'long_session_60s', time_spent: 60 });
+                }
+            }
+        }, 1000);
+        
         window.addEventListener('beforeunload', function() {
             const timeSpentSec = Math.round((Date.now() - sessionStartTime) / 1000);
             if (timeSpentSec > 5) {
                 const fbqFunc = safeFbq();
                 if (typeof fbqFunc === 'function') {
-                    fbqFunc('trackCustom', 'TimeOnPage_DEEPAK', {
+                    fbqFunc('trackCustom', 'SessionDuration_DEEPAK', {
                         seconds_spent: timeSpentSec,
                         page_type: 'telegram_promo_landing',
                         engaged: timeSpentSec > 30,
@@ -648,24 +711,47 @@
             }
         });
         
+        // ---------- Intersection Observer for Benefits Section ----------
+        const benefitsSection = document.querySelector('.points-section');
+        if (benefitsSection && 'IntersectionObserver' in window) {
+            const benefitObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const fbqFunc = safeFbq();
+                        if (typeof fbqFunc === 'function') {
+                            fbqFunc('trackCustom', 'BenefitsSectionViewed', {
+                                section: 'points_section',
+                                visible: true,
+                                pixel: PIXEL_ID
+                            });
+                        }
+                        benefitObserver.disconnect();
+                    }
+                });
+            }, { threshold: 0.4 });
+            benefitObserver.observe(benefitsSection);
+        }
+        
+        // ---------- Button Hover Intent ----------
+        document.querySelectorAll('.join-btn, .subscribe-btn').forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                const fbqFunc = safeFbq();
+                if (typeof fbqFunc === 'function') {
+                    fbqFunc('trackCustom', 'ButtonHoverIntent', {
+                        button_text: this.innerText.trim().slice(0, 30),
+                        button_type: this.classList.contains('join-btn') ? 'telegram_join' : 'subscribe',
+                        pixel: PIXEL_ID
+                    });
+                }
+            });
+        });
+        
         // ---------- Page Load Tracking (NEW PIXEL) ----------
         window.addEventListener('load', function() {
             const fbqFunc = safeFbq();
             if (typeof fbqFunc === 'function') {
-                fbqFunc('track', 'PageView', {
-                    content_name: 'DEEPAK_WADHWA_LANDING_PAGE',
-                    market_focus: 'NIFTY_BANKNIFTY_OPTIONS',
-                    owner: EXPERT_NAME,
-                    telegram_channel: TELEGRAM_CODE,
-                    pixel_id: PIXEL_ID
-                });
-                
-                fbqFunc('trackCustom', 'DEEPAK_SessionStart', {
-                    session_id: Date.now().toString(36) + Math.random().toString(36).substr(2, 8),
-                    user_bucket: 'options_traders',
-                    device_category: window.innerWidth < 768 ? 'mobile' : 'desktop',
-                    trader_name: EXPERT_NAME,
-                    telegram_invite: TELEGRAM_CODE,
+                fbqFunc('trackCustom', 'DEEPAK_PageFullyLoaded', {
+                    time_to_load: performance.now(),
                     pixel: PIXEL_ID
                 });
             }
@@ -682,6 +768,7 @@
             console.log(`🚀 ${EXPERT_NAME} | Tracking Active | Pixel: ${PIXEL_ID}`);
             console.log(`✅ Telegram Link: ${TELEGRAM_LINK}`);
             console.log(`✅ Telegram Code: ${TELEGRAM_CODE}`);
+            console.log('✅ Events: Lead, Subscribe, InitiateContact, Contact, CompleteRegistration, ScrollDepth, TimeOnPage, CustomEvents');
         });
         
         // Fallback if fbq not defined
@@ -698,7 +785,7 @@
         const bottomBtn = document.getElementById('bottomJoinBtn');
         const subBtn = document.getElementById('subscribeButton');
         const newTelegramLink = "https://t.me/+8_kMgjBNj7g1NTBl";
-        const newPixelId = "1994604241182465";
+        const newPixelId = "1329086396044390";
         
         console.log(`🔍 Final Check (UPDATED):`);
         console.log(`✓ Top Telegram: ${topBtn ? 'OK' : 'MISSING'}`);
